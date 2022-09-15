@@ -1,0 +1,5 @@
+.flexContainer {
+  display: flex;
+  gap: 2.083vw 4.688vw;
+  flex-wrap: wrap;
+}
