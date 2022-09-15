@@ -1,0 +1,40 @@
+.container {
+  width: 100vw;
+  background-color: red;
+}
+.flexHeader {
+  margin-top: 1.458vw;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  column-gap: 31.667vw;
+  border-bottom: 0.156vw solid #242e2380;
+}
+.categories {
+  font-size: 0.938vw;
+  letter-spacing: 0.047vw;
+  color: #364144;
+  display: flex;
+  list-style: none;
+  column-gap: 4.167vw;
+}
+.title {
+  line-height: 2.188vw;
+  font-size: 1.875vw;
+  letter-spacing: 0.056vw;
+  font-weight: bold;
+}
+.searchContainer {
+  display: flex;
+  justify-content: center;
+  margin-top: 2.057vw;
+}
+.searchBar {
+  width: 21.354vw;
+  height: 2.604vw;
+  border-radius: 1.302vw;
+  border-style: none;
+  font-size: 1.042vw;
+  text-align: center;
+  letter-spacing: 0.063vw;
+}
