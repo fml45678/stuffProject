@@ -15,7 +15,7 @@ export default function Home() {
         </Head>
         <div className={styles.flexContainer}>
           {data.map((data, key) => (
-            <ItemThumbnail key={key} name={data.SKU} />
+            <ItemThumbnail key={key} img={data.SKU} />
           ))}
         </div>
       </div>
