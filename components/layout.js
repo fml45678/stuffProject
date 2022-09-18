@@ -9,7 +9,7 @@ export default function Layout({ children }) {
         </span>
 
         <ul className={styles.categories}>
-          <li className={styles.electronics}>
+          <li className={styles.dropDown}>
             ELECTRONICS
             <div>
               <ul className={styles.subMenu}>
@@ -19,9 +19,32 @@ export default function Layout({ children }) {
               </ul>
             </div>
           </li>
-          <li>CRAFT</li>
-          <li>JUNK</li>
-          <li>THINGS</li>
+          <li className={styles.dropDown}>
+            CRAFT
+            <div>
+              <ul className={styles.subMenu}>
+                <li>Patterns</li>
+                <li>Sewing</li>
+                <li>Tools</li>
+              </ul>
+            </div>
+          </li>
+          <li className={styles.dropDown}>
+            JUNK
+            <div>
+              <ul className={styles.subMenu}>
+                <li>Stuff</li>
+              </ul>
+            </div>
+          </li>
+          <li className={styles.dropDown}>
+            THINGS
+            <div>
+              <ul className={styles.subMenu}>
+                <li>Toy</li>
+              </ul>
+            </div>
+          </li>
         </ul>
       </header>
       <div className={styles.searchContainer}>

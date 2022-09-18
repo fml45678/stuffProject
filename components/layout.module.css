@@ -9,7 +9,6 @@
   align-items: flex-end;
   column-gap: 31.667vw;
   border-bottom: 0.156vw solid #242e2380;
-  position: relative;
 }
 .categories {
   font-size: 0.938vw;
@@ -39,7 +38,9 @@
   text-align: center;
   letter-spacing: 0.063vw;
 }
-
+.dropDown {
+  position: relative;
+}
 .subMenu {
   background-color: #364144;
   position: absolute;
@@ -48,13 +49,15 @@
   list-style: none;
   display: flex;
   flex-direction: column;
-  row-gap: 0.885vw;
-  /* margin-top: 0.885vw; */
-  width: 6.5vw;
+  padding: 0.885vw 1vw;
   display: none;
+  left: -0.5vw;
 }
-.electronics:hover .subMenu {
-  display: block;
+.dropDown:hover .subMenu {
+  display: flex;
+}
+.subMenu > li {
+  padding: 0.521vw;
 }
 .subMenu > li:hover {
   background-color: rgb(233, 48, 205);
