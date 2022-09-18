@@ -10,7 +10,30 @@ import phonesData from "../public/data/Electric-Device-Phones.json";
 import screensData from "../public/data/Electric-Device-Screens.json";
 import keyboardsData from "../public/data/Electronics-Computer-Keyboards.json";
 
+const titleAndCodes = [
+  { title: "CRAFT", code: "CSP", file: patternData },
+  { title: "TOY", code: "TOY", file: toyData },
+  { title: "SPEAKERS", code: "EAS", file: speakersData },
+  { title: "MULTI", code: "EDM", file: multiData },
+  { title: "PHONES", code: "EDP", file: phonesData },
+  { title: "SCREENS", code: "EDS", file: screensData },
+  { title: "KEYBOARDS", code: "ECK", file: keyboardsData },
+];
+
 export default function Home() {
+  const section = titleAndCodes.map((title) => (
+    <>
+      <h1 key={title.code} className={styles.section}>
+        {title.title}
+      </h1>
+      <div className={styles.flexContainer}>
+        {title.file.map((data, key) => (
+          <ItemThumbnail cat={title.code} key={key} img={data.SKU} />
+        ))}
+      </div>
+    </>
+  ));
+
   return (
     <Layout>
       <div>
@@ -19,48 +42,7 @@ export default function Home() {
           <meta name="description" content="Catalog of all of our stuff!" />
           <link rel="icon" href="/favicon.ico" />
         </Head>
-        <h1 className={styles.section}>CRAFT</h1>
-        <div className={styles.flexContainer}>
-          {patternData.map((data, key) => (
-            <ItemThumbnail cat="CSP" key={key} img={data.SKU} />
-          ))}
-        </div>
-        <h1 className={styles.section}>TOY</h1>
-        <div className={styles.flexContainer}>
-          {toyData.map((data) => (
-            <ItemThumbnail cat="TOY" key={data.SKU} img={data.SKU} />
-          ))}
-        </div>
-        <h1 className={styles.section}>Speakers</h1>
-        <div className={styles.flexContainer}>
-          {speakersData.map((data) => (
-            <ItemThumbnail cat="EAS" key={data.SKU} img={data.SKU} />
-          ))}
-        </div>
-        <h1 className={styles.section}>Multi</h1>
-        <div className={styles.flexContainer}>
-          {multiData.map((data) => (
-            <ItemThumbnail cat="EDM" key={data.SKU} img={data.SKU} />
-          ))}
-        </div>
-        <h1 className={styles.section}>Phones</h1>
-        <div className={styles.flexContainer}>
-          {phonesData.map((data) => (
-            <ItemThumbnail cat="EDP" key={data.SKU} img={data.SKU} />
-          ))}
-        </div>
-        <h1 className={styles.section}>Screens</h1>
-        <div className={styles.flexContainer}>
-          {screensData.map((data) => (
-            <ItemThumbnail cat="EDS" key={data.SKU} img={data.SKU} />
-          ))}
-        </div>
-        <h1 className={styles.section}>Keyboards</h1>
-        <div className={styles.flexContainer}>
-          {keyboardsData.map((data) => (
-            <ItemThumbnail cat="ECK" key={data.SKU} img={data.SKU} />
-          ))}
-        </div>
+        <div>{section}</div>
       </div>
     </Layout>
   );
