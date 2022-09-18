@@ -9,7 +9,16 @@ export default function Layout({ children }) {
         </span>
 
         <ul className={styles.categories}>
-          <li>ELECTRONICS</li>
+          <li className={styles.electronics}>
+            ELECTRONICS
+            <div>
+              <ul className={styles.subMenu}>
+                <li>Audio</li>
+                <li>Devices</li>
+                <li>Computer</li>
+              </ul>
+            </div>
+          </li>
           <li>CRAFT</li>
           <li>JUNK</li>
           <li>THINGS</li>
