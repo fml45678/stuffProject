@@ -21,14 +21,14 @@ const titleAndCodes = [
 ];
 
 export default function Home() {
-  const section = titleAndCodes.map((title) => (
+  const section = titleAndCodes.map((title, key) => (
     <>
       <h1 key={title.code} className={styles.section}>
         {title.title}
       </h1>
-      <div className={styles.flexContainer}>
-        {title.file.map((data, key) => (
-          <ItemThumbnail cat={title.code} key={key} img={data.SKU} />
+      <div key={key} className={styles.flexContainer}>
+        {title.file.map((data) => (
+          <ItemThumbnail cat={title.code} key={data.SKU} img={data.SKU} />
         ))}
       </div>
     </>

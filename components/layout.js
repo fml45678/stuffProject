@@ -1,5 +1,16 @@
 import styles from "./layout.module.css";
+import Link from "next/link";
 
+const titleAndCodess = [
+  { title: "CRAFT", code: "CSP" },
+  { title: "TOY", code: "TOY" },
+  { title: "SPEAKERS", code: "EAS" },
+  { title: "MULTI", code: "EDM" },
+  { title: "PHONES", code: "EDP" },
+  { title: "SCREENS", code: "EDS" },
+  { title: "KEYBOARDS", code: "ECK" },
+];
+console.log(titleAndCodess[0].title);
 export default function Layout({ children }) {
   return (
     <div>
@@ -13,8 +24,12 @@ export default function Layout({ children }) {
             ELECTRONICS
             <div>
               <ul className={styles.subMenu}>
-                <li>Audio</li>
-                <li>Devices</li>
+                <Link href={`/categories/${titleAndCodess[0].title}`}>
+                  <li>Audio</li>
+                </Link>
+                <Link href={`/categories/${titleAndCodess[1].title}`}>
+                  <li>Devices</li>
+                </Link>
                 <li>Computer</li>
               </ul>
             </div>

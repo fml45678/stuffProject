@@ -58,6 +58,7 @@
 }
 .subMenu > li {
   padding: 0.521vw;
+  cursor: pointer;
 }
 .subMenu > li:hover {
   background-color: rgb(233, 48, 205);
