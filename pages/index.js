@@ -22,7 +22,7 @@ const titleAndCodes = [
 
 export default function Home() {
   const section = titleAndCodes.map((title, key) => (
-    <>
+    <div key={key}>
       <h1 key={title.code} className={styles.section}>
         {title.title}
       </h1>
@@ -31,7 +31,7 @@ export default function Home() {
           <ItemThumbnail cat={title.code} key={data.SKU} img={data.SKU} />
         ))}
       </div>
-    </>
+    </div>
   ));
 
   return (

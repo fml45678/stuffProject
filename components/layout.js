@@ -10,7 +10,7 @@ const titleAndCodess = [
   { title: "SCREENS", code: "EDS" },
   { title: "KEYBOARDS", code: "ECK" },
 ];
-console.log(titleAndCodess[0].title);
+
 export default function Layout({ children }) {
   return (
     <div>
