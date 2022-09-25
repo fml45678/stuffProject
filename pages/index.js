@@ -8,7 +8,7 @@ import speakersData from "../public/data/Electric-Audio-Speakers.json";
 import multiData from "../public/data/Electric-Device-Multi.json";
 import phonesData from "../public/data/Electric-Device-Phones.json";
 import screensData from "../public/data/Electric-Device-Screens.json";
-import keyboardsData from "../public/data/Electronics-Computer-Keyboards.json";
+import keyboardsData from "../public/data/Electric-Computer-Keyboards.json";
 
 const titleAndCodes = [
   { title: "CRAFT", code: "CSP", file: patternData },
